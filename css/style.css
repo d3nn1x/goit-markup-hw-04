@@ -22,7 +22,7 @@ html {
   box-sizing: inherit;
   margin: 0;
   padding: 0;
-  outline: 1px solid red;
+  /* outline: 1px solid red; */
 }
 
 h1,
@@ -185,7 +185,15 @@ button {
 .hero {
   display: flex;
   min-height: 600px;
-  background-color: #2f303a;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../img/hero/bck-hero.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
   padding: 50px 0;
 }
 
@@ -269,8 +277,20 @@ button {
 
 .works-list {
   display: flex;
-  justify-content: space-between;
-  font-size: 0;
+  flex-wrap: wrap;
+}
+
+.work-list-item {
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+
+.work-list-item:nth-child(3n) {
+  margin-right: 0;
+}
+
+.work-list-item:nth-last-child(-n + 3) {
+  margin-bottom: 0;
 }
 
 /* ======= END WORK ======= */
@@ -282,13 +302,17 @@ button {
 }
 .team-list {
   display: flex;
-  justify-content: space-between;
 }
 
 .team-list-item {
+  margin-right: 30px;
   background: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+}
+
+.team-list-item:last-child {
+  margin-right: 0;
 }
 
 .team-list-item-inner {

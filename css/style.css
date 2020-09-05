@@ -102,7 +102,8 @@ button {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background-color: #ffffff;
+  color: #afb1b8;
+  background-color: #fff;
   justify-content: center;
   align-items: center;
 }
@@ -110,18 +111,17 @@ button {
 .social-link-svg {
   width: 20px;
   height: 20px;
-  fill: #afb1b8;
+  fill: currentColor;
 }
 
-.social-link:hover {
+.social-link:hover,
+.social-link:focus {
   background-color: var(--accent-color);
 }
 
 .social-link:hover,
-.social-link-svg:hover,
-.social-link:focus,
-.social-link-svg:focus {
-  fill: #fff;
+.social-link:focus {
+  color: #fff;
 }
 
 /* ============ END SOCIAL LINKS ============*/
@@ -412,7 +412,7 @@ button {
 }
 
 .team-list-item-inner {
-  padding: 30px 60px;
+  padding: 30px 32px;
 }
 
 .team-list-item-name {
@@ -437,6 +437,58 @@ button {
   color: var(--second-color);
 }
 /* ======= END TEAM ======= */
+
+/* ======= CLIENTS ======= */
+
+.section-title {
+  margin-bottom: 50px;
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.167;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--first-color);
+}
+
+.client-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.client-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 90px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+}
+
+.clients-item-svg {
+  width: 100%;
+  height: 100%;
+  fill: #afb1b8;
+}
+
+.client-list-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.clients-item-svg:hover,
+.clients-item-svg:focus {
+  fill: var(--accent-color);
+}
+
+.client-link:hover,
+.client-link:focus {
+  border-color: var(--accent-color);
+}
+
+/* ======= END CLIENTS ======= */
 
 /* ======= PROJECTS ======= */
 
@@ -468,6 +520,8 @@ button {
 .projects-btn-item-links:focus {
   color: var(--color-white);
   background-color: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
 }
 
 .projects-item {
@@ -479,6 +533,10 @@ button {
 .project-item-list {
   margin-right: 30px;
   margin-bottom: 30px;
+}
+
+.project-item-list:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .project-item-list-inner {
@@ -521,6 +579,8 @@ button {
   background-color: #2f303a;
 }
 .footer-container {
+  display: flex;
+  align-items: center;
   width: 1200px;
   margin: 0 auto;
   padding: 60px 15px;
@@ -534,7 +594,7 @@ button {
   color: var(--color-white);
 }
 
-.address-list-item {
+.address-list-item:not(:last-child) {
   margin-bottom: 9px;
 }
 
@@ -546,5 +606,28 @@ button {
 .footer-container .logo {
   display: inline-block;
   margin-bottom: 20px;
+}
+
+.footer-contact {
+  margin-right: 70px;
+}
+
+.footer-join-slogan {
+  margin-bottom: 20px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.143;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--color-white);
+}
+
+.footer-join a {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer-join svg {
+  fill: #fff;
 }
 /* ======= END FOOTER ======= */

@@ -153,6 +153,7 @@ button {
 .header {
   padding-top: 10px;
   padding-bottom: 11px;
+  border: 1px solid #ececec;
 }
 .header-container {
   width: 1200px;
@@ -557,8 +558,52 @@ button {
   margin-bottom: 30px;
 }
 
+.project-item-list:hover .project-quote {
+  opacity: 1;
+}
+
+.project-link:focus .project-quote {
+  opacity: 1;
+}
+
 .project-item-list:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.aside {
+  position: relative;
+}
+
+.aside::before {
+  display: inline-block;
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: rgba(33, 150, 243, 0.9);
+  opacity: 0;
+}
+
+.project-item-list:hover .aside::before {
+  opacity: 1;
+}
+
+.project-link:focus .aside::before {
+  opacity: 1;
+}
+
+.project-quote {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 63px 24px;
+  opacity: 0;
+
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  color: #fff;
 }
 
 .project-item-list-inner {
@@ -653,3 +698,36 @@ button {
   fill: #fff;
 }
 /* ======= END FOOTER ======= */
+
+/* ========== MODAL WINDOW ========== */
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  min-width: 528px;
+  min-height: 581px;
+
+  background-color: #fff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+/* ========== END MODAL WINDOW ========== */
